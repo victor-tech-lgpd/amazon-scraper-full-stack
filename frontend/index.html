@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Product Scraper</title>
+  <link rel="stylesheet" href="/src/css/main.css">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>Amazon Product Scraper</h1>
+      <p>Encontre produtos na Amazon com uma simples busca</p>
+    </header>
+
+    <main>
+      <section class="search-section" aria-labelledby="search-heading">
+        <h2 id="search-heading" class="sr-only">Formulário de Busca</h2>
+        <form id="search-form" class="search-form">
+          <div class="input-group">
+            <label for="keyword-input" class="sr-only">Palavra-chave</label>
+            <input type="text" id="keyword-input" placeholder="Ex: teclado mecânico" required minlength="2">
+            <button type="submit" id="search-button">Buscar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="feedback-section">
+        <div id="loader" class="loader-container hidden">
+          <div class="loader"></div>
+          <p>Buscando produtos...</p>
+        </div>
+        <div id="error-message" class="error-container hidden"></div>
+      </section>
+
+      <section id="results-section" class="results-section" aria-live="polite">
+        </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Projeto desenvolvido para fins educacionais. Respeite os Termos de Serviço da Amazon.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
